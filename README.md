@@ -24,9 +24,7 @@ From a Kali Linux machine run the following commands:
 git clone https://github.com/tracelabs/tlosint-vm
 sudo apt -y install debos p7zip qemu-utils zerofree
 cd tlosint-vm
-chmod +x scripts/tl/*.sh
-chmod +x scripts/*.sh
-chmod +x *.sh
+find . -type f -iname "*.sh" -exec chmod +x {} \;
 sudo ./build.sh
 Locate the OVA in the images/ directory
 ```
